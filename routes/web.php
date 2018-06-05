@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/home', function(){
+    return view('cover');
 });
+Route::get('/inicio','UserController@index');

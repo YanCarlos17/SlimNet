@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(../img/bg4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.body-cover{
+    background-image: url(../img/freedom.jpg) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+}
+.button-cover:hover{
+    background-color: rgb(216, 209, 11);
+}
+
+.barnav{
+    background-color: rgba(52, 51, 52, 0.8);
+}
+.content{
+    max-width: 1400px;
+    width: 100%;
+    height: 100vh;
+    margin: 6.5rem auto 0;
+    background-color: rgba(67, 63, 63, 0.714);
+    padding: 1rem;
+}
+.form-signin{
+    text-align: center;
+    background-color: rgb(242, 238, 238);
+    padding: 1rem;
+}
