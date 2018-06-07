@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layout</title>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/carousel.css') }}">
 </head>
 <body>
   {{-- HEADER --}}
@@ -22,17 +23,15 @@
     </div>
   </div>
 
-  {{-- BANNER --}}
+  {{-- BANNER--}}
   <div class="banner">
-    <div class="carousel">
-
-    </div>
+    
   </div>
 
   {{-- NAVBAR --}}
   <div class="navbar">
       <ul class="navbar__list">
-      <a class="list__item" href="{{url('/')}}"><li>1</li></a>
+      <a class="list__item" href="{{url('/')}}"><li>Home</li></a>
       <a class="list__item" href=""><li>2</li></a>
       <a class="list__item" href=""><li>3</li></a>
       <a class="list__item" href=""><li>4</li></a>
@@ -51,6 +50,9 @@
 
     </footer>
   </div>
+  <script src="{{ asset('js/jquery.js') }}"></script>
+  <script src="{{ asset('js/carousel.js') }}"></script>
+  <script src="{{ asset('js/app.js') }}"></script>
 
   </body>
 </html>     

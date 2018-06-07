@@ -4,14 +4,24 @@
     text-decoration: none;
 }
 body{
-    background-color: rgb(60, 59, 56);
+    background-color: rgb(60, 59, 56) !important;
+    max-width: 1580px;
+    margin: 0 auto;
 }
+.body-cover{
+    background-image: url(../img/freedom.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .header{
-    position: fixed;
     width: 100%;
     height: 5rem;
     background-color: rgb(21, 188, 191);
     top:0;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
 }
@@ -41,16 +51,17 @@ body{
     }
 
 .banner{
-    margin-top: 5rem;
     width: 100%;
     height:30rem;
     background-color: rgba(118, 102, 102, 0.659);
+    overflow: hidden;
 }
 .navbar{
-     
+    position: absolute;
     width: 60rem;
     height: 3rem;
-    margin: -3rem auto 0;
+    left: 30rem;
+    top:32rem;
     background-color: rgba(63, 24, 24, 0.824);
 }
     .navbar__list{
@@ -72,7 +83,6 @@ body{
             color: lightgreen;
         }
 .container{
-    max-width: 1580px;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
