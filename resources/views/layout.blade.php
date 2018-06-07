@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Layout</title>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/carousel.css') }}">
 </head>
 <body>
+
   {{-- HEADER --}}
   <div class="header">
     <div class="header__logo">
@@ -17,15 +17,24 @@
         <p class="social__text">
           Follow me
         </p>
-      <a href="#" class="redes"><span class="icon">&</span></a>
-      <a href="#" class="redes"><span class="icon">&</span></a>
-      <a href="#" class="redes"><span class="icon">&</span></a>
+      <a href="#" class="redes"><span class="icon">*</span></a>
+      <a href="#" class="redes"><span class="icon">*</span></a>
+      <a href="#" class="redes"><span class="icon">*</span></a>
     </div>
   </div>
 
   {{-- BANNER--}}
   <div class="banner">
-    
+    <img src="{{asset('img/banner-3.jpg')}}" alt="" id="img1">
+    <img src="{{asset('img/foto-banner-1.jpg')}}" alt="" id="img2">
+    <img src="{{asset('img/banner-2.jpg')}}" alt="" id="img3">
+
+    <ul class="banner__list">
+      <a href="#img1"><li class="banner__item"><span>1</span> </li></a>
+      <a href="#img2"><li class="banner__item"><span>2</span> </li></a>
+      <a href="#img3"><li class="banner__item"><span>3</span> </li></a>
+    </ul>
+
   </div>
 
   {{-- NAVBAR --}}
@@ -50,9 +59,6 @@
 
     </footer>
   </div>
-  <script src="{{ asset('js/jquery.js') }}"></script>
-  <script src="{{ asset('js/carousel.js') }}"></script>
-  <script src="{{ asset('js/app.js') }}"></script>
 
   </body>
 </html>     

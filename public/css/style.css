@@ -55,14 +55,34 @@ body{
     height:30rem;
     background-color: rgba(118, 102, 102, 0.659);
     overflow: hidden;
+    display: flex;
 }
+    .banner__list{
+        position: absolute;
+        width:20rem;
+        height: 3rem;
+        display: flex;
+        z-index: 99;
+        font-size: 2rem;
+        list-style: none;
+        left:50rem;
+    }
+        .banner__list a{
+            color: white;
+        }
+        .banner__item{
+            width: 7rem;
+            height: 3rem;
+            text-align: center;
+        }
+
 .navbar{
     position: absolute;
     width: 60rem;
     height: 3rem;
     left: 30rem;
     top:32rem;
-    background-color: rgba(63, 24, 24, 0.824);
+    background-color: rgba(58, 56, 56, 0.824);
 }
     .navbar__list{
         display: flex;
