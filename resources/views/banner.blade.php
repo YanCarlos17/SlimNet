@@ -6,7 +6,7 @@
                 <div class="slide slide-1"><img src="{{ asset('img/foto-banner-1.jpg')}}" alt=""></div>
                 <div class="slide slide-2"><img src="{{ asset('img/banner-2.jpg')}}" alt=""></div>
                 <div class="slide slide-3"><img src="{{ asset('img/banner-3.jpg')}}" alt=""></div>
-                <div class="slide slide-4"><img src="{{ asset('img/foto-banner-1.jpg')}}" alt=""></div>
+                <div class="slide slide-4"><img src="{{ asset('img/banner-4.jpg')}}" alt=""></div>
             </div>
         </div>
         <div class="slide-nav">
