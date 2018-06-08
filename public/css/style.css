@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    list-style: none;
 }
 body{
     background-color: rgb(60, 59, 56) !important;
@@ -231,5 +232,5 @@ body{
 .footer{
     width: 100%;
     height: 4rem;
-    background-color: rgb(19, 162, 95);
+    background-color: rgb(21, 188, 191);
 }

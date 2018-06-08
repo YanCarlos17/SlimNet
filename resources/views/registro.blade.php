@@ -1,9 +1,16 @@
 @extends('layout')
 
     @section('content')
-        <h1>Bienvenido!</h1>
+        <h1 class="text-center">{{ $title }}</h1>
+        <ul>
+            @forelse($users as $user)
+                <li>{{ $user->nombre }} --> {{ $user->email }} --tel: {{ $user->telefono }}</li>
+            @empty
+                <li>No hay Usuarios Registrados</li>
+            @endforelse        
+        </ul>
     @endsection
 
     @section('sidebar')
-        <h2>Barra Lateral</h2>
+        <h2 class="text-center">Barra Lateral</h2>
     @endsection
