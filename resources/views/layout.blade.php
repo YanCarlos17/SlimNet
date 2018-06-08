@@ -31,7 +31,7 @@
   <div class="navbar">
       <ul class="navbar__list">
       <a class="list__item" href="{{url('/')}}"><li>Home</li></a>
-      <a class="list__item" href=""><li>Quienes Somos?</li></a>
+      <a class="list__item" href="{{url('/nuevo-registro')}}"><li>Portafolio</li></a>
       <a class="list__item" href=""><li>Contacto</li></a>
       <a class="list__item" href=""><li>Haz parte</li></a>
       <a class="list__item" href=""><li>Top 10!</li></a>

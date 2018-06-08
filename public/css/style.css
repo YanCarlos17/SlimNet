@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal');
 *{
     padding: 0;
     margin: 0;
@@ -7,7 +8,12 @@ body{
     background-color: rgb(60, 59, 56) !important;
     max-width: 1580px;
     margin: 0 auto;
+    font-family: 'Arsenal', sans-serif;
 }
+.text-center{
+    text-align: center;
+}
+
 .body-cover{
     background-image: url(../img/freedom.jpg);
     background-repeat: no-repeat;
@@ -47,7 +53,7 @@ body{
     }
     .icon{
         display: inline-block;
-        padding-top: 12px;
+        padding-top: 11px;
     }
         #icon-face{
             color: blue;
@@ -80,7 +86,7 @@ body{
             color: white;
         }
         .banner__item{
-            width: 7rem;
+            width: 7.3rem;
             height: 3rem;
             text-align: center;
         }
@@ -135,6 +141,13 @@ body{
                 height: 100%;
                 background-color: rgb(96, 119, 130);
             }
+.form-signin{
+    text-align: center;
+    padding-top: 2rem;
+}         
+    .form-title{
+        padding-top: 3rem;
+    }  
 
 .footer{
     width: 100%;
