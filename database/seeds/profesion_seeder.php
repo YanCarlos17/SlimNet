@@ -13,10 +13,15 @@ class profesion_seeder extends Seeder
      */
     public function run()
     {
-        \App\Profesion::table([
-            'codigo' => '4',
-            'titulo' => 'Social- Media',
-        ]);
+        //\App\Profesion::create([
+        //    'codigo' => '4',
+        //    'titulo' => 'Arquitecto',
+        //]);
+
+        //\App\Profesion::create([
+        //    'codigo' => '5',
+        //    'titulo' => 'Ingeniero en Sistemas',
+        //]);
 
         //DB::table('Profesion')->insert([
         //    'titulo'=>'Desarrollador Backend'

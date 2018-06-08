@@ -65,31 +65,110 @@ body{
             color: red;
         }
 
-.banner{
+.slider{
+    position: relative;
     width: 100%;
     height:30rem;
     background-color: rgba(118, 102, 102, 0.659);
     overflow: hidden;
     display: flex;
+    box-sizing: border-box;
 }
-    .banner__list{
-        position: absolute;
-        width:20rem;
-        height: 3rem;
-        display: flex;
-        z-index: 99;
-        font-size: 2rem;
-        list-style: none;
-        left:50rem;
+.slide-viewer {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
     }
-        .banner__list a{
-            color: white;
-        }
-        .banner__item{
-            width: 7.3rem;
-            height: 3rem;
-            text-align: center;
-        }
+
+.slide:first-child {
+    display: block;
+    }
+    .slide img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* slide-nav */
+.slide-nav {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+.slide-nav .prev, .slide-nav .next {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.205);
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+.slide-nav .prev {
+    left: 0;
+}
+.slide-nav .next {
+    right: 0;
+}
+.slide-nav .prev::before, .slide-nav .prev::after, .slide-nav .next::before, .slide-nav .next::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(50% 50%);
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    z-index: 3;
+}
+.slide-nav .prev::before {
+    transform-origin: 0 50%;
+    transform: rotate(50deg) translate(-1px, -1px);
+}
+.slide-nav .prev::after {
+    transform-origin: 0 50%;
+    transform: rotate(-50deg);
+}
+.slide-nav .next::before {
+    transform-origin: 100% 50%;
+    transform: rotate(50deg);
+}
+.slide-nav .next::after {
+    transform-origin: 100% 50%;
+    transform: rotate(-50deg) translate(1px, -1px);
+}
+
+/* button */
+.slide-buttons {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slide-btn {
+  border: none;
+  background: none;
+  color: #000;
+  font-size: 200%;
+  line-height: 0.5em;
+  outline: none;
+}
+
+.slide-btn.active, .slide-btn:hover {
+  color: #ed8e6c;
+  cursor: pointer;
+}
 
 .navbar{
     position: absolute;
