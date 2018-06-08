@@ -19,7 +19,9 @@
 @section('scripts')
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script type="text/javascript">
+
         $('document').ready(function () {
+
             $('.slider').each(function(){
                 var $this = $(this);
                 var $group = $this.find('.slide-group');
@@ -46,12 +48,11 @@
                     }
                 });
 
-            function move(newIndex) {
+                function move(newIndex) {
                 var animateLeft, slideLeft;
 
                 advance();
-
-                if ($group.is(':animated') || currentIndex === newIndex) {
+                    if ($group.is(':animated') || currentIndex === newIndex) {
                     return;
                 }
 
@@ -59,15 +60,15 @@
                 buttonArray[newIndex].addClass('active');
 
                 if (newIndex > currentIndex) {
-                    slideLeft = '100%';
-                    animateLeft = '-100%';
+                    $slideLeft = '100%';
+                    $animateLeft = '-100%';
                 } else {
-                    slideLeft = '-100%';
-                    animateLeft = '100%';
+                    $slideLeft = '-100%';
+                    $animateLeft = '100%';
                 }
 
                 $slides.eq(newIndex).css({
-                    left: slideLeft,
+                    left: $slideLeft,
                     display: 'block'
                 });
 
