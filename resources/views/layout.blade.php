@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout</title>
+  <title>@yield('title')</title>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
@@ -17,40 +17,37 @@
         <p class="social__text">
           Follow me
         </p>
-      <a href="#" class="redes"><span class="icon">*</span></a>
-      <a href="#" class="redes"><span class="icon">*</span></a>
-      <a href="#" class="redes"><span class="icon">*</span></a>
+      <a href="#" class="redes"><span class="icon" id="icon-face"><i class="fab fa-facebook-f"></i></span></a>
+      <a href="#" class="redes"><span class="icon" id="icon-twuit"><i class="fab fa-twitter"></i></span></a>
+      <a href="#" class="redes"><span class="icon" id="icon-you"><i class="fab fa-youtube"></i></span></a>
     </div>
   </div>
 
   {{-- BANNER--}}
-  <div class="banner">
-    <img src="{{asset('img/banner-3.jpg')}}" alt="" id="img1">
-    <img src="{{asset('img/foto-banner-1.jpg')}}" alt="" id="img2">
-    <img src="{{asset('img/banner-2.jpg')}}" alt="" id="img3">
-
-    <ul class="banner__list">
-      <a href="#img1"><li class="banner__item"><span>1</span> </li></a>
-      <a href="#img2"><li class="banner__item"><span>2</span> </li></a>
-      <a href="#img3"><li class="banner__item"><span>3</span> </li></a>
-    </ul>
-
-  </div>
+  
+  @include('banner')
 
   {{-- NAVBAR --}}
   <div class="navbar">
       <ul class="navbar__list">
       <a class="list__item" href="{{url('/')}}"><li>Home</li></a>
-      <a class="list__item" href=""><li>2</li></a>
-      <a class="list__item" href=""><li>3</li></a>
-      <a class="list__item" href=""><li>4</li></a>
-      <a class="list__item" href=""><li>5</li></a>
+      <a class="list__item" href=""><li>Quienes Somos?</li></a>
+      <a class="list__item" href=""><li>Contacto</li></a>
+      <a class="list__item" href=""><li>Haz parte</li></a>
+      <a class="list__item" href=""><li>Top 10!</li></a>
     </ul>
   </div>
 
   {{-- CONTAINT --}}
   <div class="container">
-
+    <div class="row-container">
+      <div class="column" id="column1">
+          @yield('content')
+      </div>
+      <div class="column" id="column2">
+          @yield('sidebar')
+      </div>
+    </div>
   </div>
 
   {{-- FOOTER --}}
@@ -59,6 +56,13 @@
 
     </footer>
   </div>
+  <script src="{{ asset('js/jquery.js') }}"></script>
+  <script src="{{ asset('js/banner.js') }}"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
+
+  <script>
+
+  </script>
   </body>
 </html>     

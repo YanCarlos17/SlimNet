@@ -47,8 +47,17 @@ body{
     }
     .icon{
         display: inline-block;
-        padding-top: 10px;
+        padding-top: 12px;
     }
+        #icon-face{
+            color: blue;
+        }
+        #icon-twuit{
+            color: lightskyblue;
+        }
+        #icon-you{
+            color: red;
+        }
 
 .banner{
     width: 100%;
@@ -108,6 +117,25 @@ body{
     margin: 0 auto;
     background-color: #fff;
 }
+    .row-container{
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+        .column{
+            float: left;
+        }
+            #column1{
+                width: 70%;
+                height: 100%;
+                background-color: rgb(126, 123, 123);
+            }
+            #column2{
+                width: 30%;
+                height: 100%;
+                background-color: rgb(96, 119, 130);
+            }
+
 .footer{
     width: 100%;
     height: 4rem;

@@ -15,3 +15,4 @@ Route::get('/', function(){
     return view('cover');
 });
 Route::get('/inicio','UserController@index');
+Route::get('/nuevo-registro','UserController@create');
