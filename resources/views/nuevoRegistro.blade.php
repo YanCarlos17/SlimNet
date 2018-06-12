@@ -3,5 +3,5 @@
     
 @endsection
 @section('sidebar')
-    
+    @include('sideform')
 @endsection

@@ -5,7 +5,7 @@
         <ul>
             @forelse($users as $user)
                 <li>
-                    {{ $user->nombre }} --> {{ $user->email }} --tel: {{ $user->telefono }} 
+                    Nombre:&nbsp;{{ $user->nombre }} &nbsp; email:&nbsp;{{ $user->email }} &nbsp; tel:&nbsp;{{ $user->telefono }} &nbsp; 
                     <a href="{{url("/detalle-usuario/{$user->id}")}}">Ver detalles</a>
                 </li>
             @empty

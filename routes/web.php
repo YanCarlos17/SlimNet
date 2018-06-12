@@ -15,6 +15,6 @@ Route::get('/', function(){
     return view('cover');
 });
 Route::get('/inicio','UserController@index');
-//Route::get('/nuevo-registro','UserController@create');
-Route::get('/nuevo-registro','UserController@show');
+Route::get('/registros','UserController@show');
+Route::get('/nuevo-registro','UserController@create');
 Route::get('/detalle-usuario/{id}','UserController@detail');

@@ -34,6 +34,7 @@
         <p class="lead"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ullam! Facilis, neque alias consequuntur saepe numquam at, quisquam reiciendis accusantium sunt ab et exercitationem amet ipsa illo placeat quidem odit id architecto eaque quos atque.</p>
         <p class="lead">
           <a href="#" class="btn btn-lg btn-secondary button-cover">Ver más</a>
+          <a href="{{url('/nuevo-registro')}}" class="btn btn-lg btn-secondary button-cover">Registrarme</a>
         </p>
       </main>
 
