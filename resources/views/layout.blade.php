@@ -19,9 +19,9 @@
         <p class="social__text">
           Siguenos!
         </p>
-      <a href="#" class="redes"><span class="icon" id="icon-face"><i class="fab fa-facebook-f"></i></span></a>
-      <a href="#" class="redes"><span class="icon" id="icon-twuit"><i class="fab fa-twitter"></i></span></a>
-      <a href="#" class="redes"><span class="icon" id="icon-you"><i class="fab fa-youtube"></i></span></a>
+      <a href="#" id="face" class="redes"><span class="icon" id="icon-face"><i class="fab fa-facebook-f"></i></span></a>
+      <a href="#" id="twiter" class="redes"><span class="icon" id="icon-twuit"><i class="fab fa-twitter"></i></span></a>
+      <a href="#" id="youtube" class="redes"><span class="icon" id="icon-you"><i class="fab fa-youtube"></i></span></a>
     </div>
   </div>
 

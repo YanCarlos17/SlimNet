@@ -51,7 +51,17 @@ body{
         margin: 2px;
         text-align: center;
         border-radius: 50%;
+        
     }
+        #face{
+            border:1px solid blue;
+        }
+        #twiter{
+            border:1px solid skyblue;
+        }   
+        #youtube{
+            border:1px solid red;
+        }
     .icon{
         display: inline-block;
         padding-top: 11px;
@@ -273,13 +283,12 @@ body{
     }  
 
 .showTable{
-    
     text-align: center;
-
+    margin: 30px 0;
 } 
     .showTable td{
         padding: 5px;
-        width: 200px;
+        width: 250px;
         height: 20px;
         border: 1px solid gray;
     }
@@ -290,13 +299,26 @@ body{
 .detailspan{
     color: lightskyblue;
 }
-
+.danger-alert{
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgb(255, 224, 224);
+    color: #ae2016;
+    border: 1px solid #ae2016;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px; 
+}
+.alert-list{
+    list-style: circle !important;
+}
     
 
 .footer{
     width: 100%;
     height: 4rem;
     background-color: rgb(21, 188, 191);
+    text-align: center;
 }
 .error-body{
     background-image: url(../img/404deadpool.jpg);

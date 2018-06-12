@@ -34,13 +34,17 @@ class UserController extends Controller
     public function store()//Request $request
     {
 
-        $data = request()->all();
+        $data = request()->validate([
+            'nombre' => 'required',
+            'email' => 'required',
+            'telefono' => 'required'
+        ]);
         User::create([
             'nombre' => $data['nombre'],
             'email' => $data['email'],
             'telefono' => $data['telefono'],
             'cod_profesion' => $data['cod_profesion']
         ]);    
-        return redirect()->route('registro');//
+        return redirect()->route('registro');
     }
 }

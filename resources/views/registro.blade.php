@@ -11,21 +11,13 @@
             </tr>
         @forelse($users as $user)        
             <tr>
-                <td>
-                    {{ $user->nombre }}
-                </td>
-                <td>
-                    {{ $user->email }}
-                </td>
-                <td>
-                    {{ $user->telefono }}
-                </td>
-                <td>
-                    {{ $user->cod_profesion }} 
-                </td>
-                <td>
-                    <a href="{{ url("/detalle-usuario/{$user->id}") }}">Ver detalle</a> 
-                </td>
+                <td>{{ $user->nombre }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->telefono }}</td>
+                <td>{{ $user->cod_profesion }} </td>
+                <td><a href="{{ url("/detalle-usuario/{$user->id}") }}">Ver detalle</a></td>
+                <td><a href="#">Modificar</a></td>
+                <td><a href="#">Eliminar</a></td>
             </tr>
         @empty        
             <p>No hay Registros</p>  
