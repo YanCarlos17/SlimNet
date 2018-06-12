@@ -17,3 +17,4 @@ Route::get('/', function(){
 Route::get('/inicio','UserController@index');
 //Route::get('/nuevo-registro','UserController@create');
 Route::get('/nuevo-registro','UserController@show');
+Route::get('/detalle-usuario/{id}','UserController@detail');

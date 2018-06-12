@@ -4,7 +4,10 @@
         <h1 class="text-center">{{ $title }}</h1>
         <ul>
             @forelse($users as $user)
-                <li>{{ $user->nombre }} --> {{ $user->email }} --tel: {{ $user->telefono }}</li>
+                <li>
+                    {{ $user->nombre }} --> {{ $user->email }} --tel: {{ $user->telefono }} 
+                    <a href="{{url("/detalle-usuario/{$user->id}")}}">Ver detalles</a>
+                </li>
             @empty
                 <li>No hay Usuarios Registrados</li>
             @endforelse        

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -17,13 +18,23 @@ class UserController extends Controller
         return view('registro');
     }
 
-    public function show($id)
+    public function show()
     {
-        $users = UserModel::find($id);
-        //$users= User::all();
+        
+        $users= User::all();
+        
         $title= 'Listado de Usuarios';
-     
-        dd($users);
+    
         return view('registro',compact('users','title'));
+    }
+
+    public function detail($id)
+    {
+        
+        $users= User::find($id);
+        $id= $users->id;
+        $title= 'Detalle del Usuario:';
+    
+        return view('detalle',compact('users','title'));
     }
 }
