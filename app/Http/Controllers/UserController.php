@@ -15,7 +15,7 @@ class UserController extends Controller
     
     public function create()
     {
-        return view('nuevoRegistro');
+        return view('crear');
     }
 
     public function show()
@@ -25,14 +25,22 @@ class UserController extends Controller
         return view('registro',compact('users','title'));
     }
 
-    public function detail($id)
+    public function detail(User $user)
     {
-        $users= User::find($id);
         $title= 'Detalle del Usuario:';
-        if($users == null)
-        {
-            return view('404');
-        }
-        return view('detalle',compact('users','title'));
+        return view('detalle',compact('user','title'));
+    }
+
+    public function store()//Request $request
+    {
+
+        $data = request()->all();
+        User::create([
+            'nombre' => $data['nombre'],
+            'email' => $data['email'],
+            'telefono' => $data['telefono'],
+            'cod_profesion' => $data['cod_profesion']
+        ]);    
+        return redirect()->route('registro');//
     }
 }

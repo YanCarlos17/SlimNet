@@ -2,11 +2,13 @@
           
     @section('content')
         <h1 class="text-center">{{$title}}</h1>
-        <h2>Usuario #&nbsp;{{$users->id}}</h2> <br>
-        <h4>Nombre Usuario:&nbsp;{{$users->nombre}}.</h4><br> 
-        <h4>Correo Electrónico:&nbsp;{{$users->email}}.</h4><br>
+        <h2> Usuario#&nbsp;{{$user->id}}</h2> <br>
+        <h3> <span class="detailspan">Nombre Usuario:&nbsp;</span>&nbsp;{{$user->nombre}}.</h3><br> 
+        <h3> <span class="detailspan">Correo Electrónico:&nbsp;</span>&nbsp;{{$user->email}}.</h3><br>
+        <h3> <span class="detailspan">Teléfono:&nbsp;</span>&nbsp;{{$user->telefono}}.</h3><br>
+        <h3> <span class="detailspan">Profesión:&nbsp;</span>&nbsp;{{$user->cod_profesion}}.</h3><br>
 
-        <a href="{{url('/registros')}}">Volver a Listado</a>
+        <a href="{{url('/registro')}}">Volver a Listado</a>
     @endsection
 
     @section('sidebar')

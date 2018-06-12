@@ -12,12 +12,6 @@ class Users extends Seeder
      */
     public function run()
     {
-        \App\UserModel::create([
-            
-            'nombre' => 'Gurnilfo Pencora',
-            'email' => 'email@mail.com.co',
-            'telefono' => '5598664',
-            'cod_profesion' => '4',
-        ]);
+       
     }
 }

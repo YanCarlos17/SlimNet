@@ -17,7 +17,7 @@
     </div>
     <div class="socials">
         <p class="social__text">
-          Follow me
+          Siguenos!
         </p>
       <a href="#" class="redes"><span class="icon" id="icon-face"><i class="fab fa-facebook-f"></i></span></a>
       <a href="#" class="redes"><span class="icon" id="icon-twuit"><i class="fab fa-twitter"></i></span></a>
@@ -33,8 +33,8 @@
   <div class="navbar">
       <ul class="navbar__list">
       <a class="list__item" href="{{url('/')}}"><li>Home</li></a>
-      <a class="list__item" href="{{url('/registros')}}"><li>Ver Registros</li></a>
-      <a class="list__item" href=""><li>Contacto</li></a>
+      <a class="list__item" href="{{url('/registro')}}"><li>Ver Registros</li></a>
+      <a class="list__item" href="{{url('/crear-registro')}}"><li>Registrate!</li></a>
       <a class="list__item" href=""><li>Haz parte</li></a>
       <a class="list__item" href=""><li>Top 10!</li></a>
     </ul>
@@ -55,7 +55,7 @@
   {{-- FOOTER --}}
   <div class="footer">
     <footer>
-
+        Sticky Footer
     </footer>
   </div> 
   @yield('scripts')

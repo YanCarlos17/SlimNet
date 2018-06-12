@@ -15,6 +15,9 @@ Route::get('/', function(){
     return view('cover');
 });
 Route::get('/inicio','UserController@index');
-Route::get('/registros','UserController@show');
-Route::get('/nuevo-registro','UserController@create');
-Route::get('/detalle-usuario/{id}','UserController@detail');
+Route::get('/registro', ['as' => 'registro', 'uses' => 'UserController@show']);
+
+Route::get('/crear-registro','UserController@create');
+Route::post('/crear','UserController@store');
+
+Route::get('/detalle-usuario/{user}','UserController@detail');

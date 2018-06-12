@@ -152,7 +152,7 @@ body{
 .slide-buttons {
   text-align: center;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -167,7 +167,7 @@ body{
 }
 
 .slide-btn.active, .slide-btn:hover {
-  color: #ed8e6c;
+  color: #92eb39;
   cursor: pointer;
 }
 
@@ -215,41 +215,92 @@ body{
     .message a{
         color:rgb(150, 150, 150);
     }
-
+    .message a:hover{
+        color:rgb(255, 255, 255);
+    }
 .container{
     width: 100%;
-    height: 100vh;
+    
     margin: 0 auto;
     background-color: #fff;
 }
     .row-container{
         display: flex;
         width: 100%;
-        height: 100%;
+        
     }
         .column{
             float: left;
         }
             #column1{
                 width: 70%;
-                height: 100%;
                 background-color: rgb(126, 123, 123);
+                padding: 20px;
             }
             #column2{
                 width: 30%;
-                height: 100%;
                 background-color: rgb(96, 119, 130);
+                padding: 10px;
             }
+
 .form-signin{
-    text-align: center;
-    padding-top: 2rem;
-}         
+    padding-top:2rem;
+    padding-left: 30px;
+    display: inline-block;
+   
+} 
+    .btn-sign{
+        background-color: rgb(35, 104, 109);
+        font-size:20px;
+        color: white;
+        width: 300px;
+        height: 30px;
+        border-radius: 7px;
+        margin-left: 30px;
+    }
+    .btn-sign:hover{
+        background-color: rgb(114, 215, 31);
+        color: black;
+    }
+    .form-signin input, select{
+        width: 350px;
+        height: 30px;
+        border-radius:7px;
+        margin:8px auto;
+    }        
     .form-title{
         padding-top: 3rem;
     }  
+
+.showTable{
+    
+    text-align: center;
+
+} 
+    .showTable td{
+        padding: 5px;
+        width: 200px;
+        height: 20px;
+        border: 1px solid gray;
+    }
+.showTable_td{
+    background-color: rgb(52, 87, 138);
+    color: white;
+}     
+.detailspan{
+    color: lightskyblue;
+}
+
+    
 
 .footer{
     width: 100%;
     height: 4rem;
     background-color: rgb(21, 188, 191);
+}
+.error-body{
+    background-image: url(../img/404deadpool.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }

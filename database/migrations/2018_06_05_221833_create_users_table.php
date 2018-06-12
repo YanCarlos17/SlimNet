@@ -19,7 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('nombre');
             $table->string('email')->unique();
             $table->integer('telefono');
-
             $table->unsignedInteger('cod_profesion');
             $table->foreign('cod_profesion')->references('codigo')->on('Profesion');
 

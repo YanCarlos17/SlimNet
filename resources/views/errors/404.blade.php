@@ -6,11 +6,9 @@
     <title>404 - NotFound</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<body>
+<body class="error-body">
     <div class="message">
-        <figure>
-
-        </figure>
+        
         <h1>Error 404</h1>
         <h3>Lo sentimos la pagina que estas solicitando no ha sido encontrada.</h3>
         <a href="{{ url('/')}}">Volver</a>
