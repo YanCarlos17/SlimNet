@@ -187,12 +187,12 @@ body{
 }
 
 .navbar{
-    position: absolute;
-    width: 60rem;
+    position: relative;
+    width: 60%;
     height: 3rem;
-    left: 30rem;
-    top:32rem;
-    background-color: rgba(58, 56, 56, 0.824);
+    margin: -48px auto 0;
+    z-index: 3;
+    background-color: rgba(28, 105, 133, 0.817);
 }
     .navbar__list{
         display: flex;
@@ -244,12 +244,12 @@ body{
         }
             #column1{
                 width: 70%;
-                background-color: rgb(126, 123, 123);
+                background-color: rgb(255, 255, 255);
                 padding: 20px;
             }
             #column2{
                 width: 30%;
-                background-color: rgb(96, 119, 130);
+                background-color: rgb(175, 175, 175);
                 padding: 10px;
             }
 
@@ -258,7 +258,9 @@ body{
     padding-left: 30px;
     display: inline-block;
    
-} 
+} .form-signin h1{
+    margin: 15px auto;
+}
     .btn-sign{
         background-color: rgb(35, 104, 109);
         font-size:20px;

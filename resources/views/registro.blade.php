@@ -2,7 +2,7 @@
 
     @section('content')
         <h1 class="text-center">{{ $title }}</h1>
-        <table width="700" class="showTable">
+        <table class="showTable">
             <tr>
                 <td class="showTable_td">NOMBRE</td>
                 <td class="showTable_td">EMAIL</td>
@@ -16,8 +16,8 @@
                 <td>{{ $user->telefono }}</td>
                 <td>{{ $user->cod_profesion }} </td>
                 <td><a href="{{ url("/detalle-usuario/{$user->id}") }}">Ver detalle</a></td>
-                <td><a href="#">Modificar</a></td>
-                <td><a href="#">Eliminar</a></td>
+                <td><a href="{{url("/detalle-usuario/{$user->id}/editar")}}">Modificar</a></td>
+                <td><a href="{{--{{url("/detalle-usuario/{$user->id}/eliminar")}}--}}#">Eliminar</a></td>
             </tr>
         @empty        
             <p>No hay Registros</p>  
