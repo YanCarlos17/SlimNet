@@ -14,16 +14,14 @@ class Profesion extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'codigo', 'profesion' 
-    ];
+    public $timestamps = false;
+    protected $table='Profesion';
+    protected $fillable = ['codigo','titulo'];
 
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
-    protected $hidden = [
-        'codigo', 'remember_token',
-    ];
+    protected $hidden = ['remember_token'];
 }

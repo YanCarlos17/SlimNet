@@ -246,11 +246,19 @@ body{
                 width: 70%;
                 background-color: rgb(255, 255, 255);
                 padding: 20px;
+                box-sizing: border-box;
             }
+                .img__bike{
+                    width: 80%;
+                }
+                .img__bike img{
+                    width: 100%;
+                }
             #column2{
                 width: 30%;
                 background-color: rgb(175, 175, 175);
                 padding: 10px;
+                box-sizing: border-box;
             }
 
 .form-signin{
@@ -323,7 +331,7 @@ body{
     text-align: center;
 }
 .error-body{
-    background-image: url(../img/404deadpool.jpg);
+    background-color: rgb(80, 80, 80);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

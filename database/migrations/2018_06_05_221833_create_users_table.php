@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::defaultStringLength(191);
+        Schema::defaultStringLength(200);
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('nombre');
@@ -21,7 +21,6 @@ class CreateUsersTable extends Migration
             $table->integer('telefono');
             $table->unsignedInteger('cod_profesion');
             $table->foreign('cod_profesion')->references('codigo')->on('Profesion');
-
             $table->timestamps();
         });
     }

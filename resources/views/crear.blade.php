@@ -18,7 +18,7 @@
         <label for="email">Correo Electrónico:<br></label>
             <input type="email" name="email" id="email"><br>
         <label for="telefono">Teléfono:<br></label>
-            <input type="text" name="telefono" id="telefono"><br>
+            <input type="tel" name="telefono" id="telefono" maxlength="15"><br>
         <label for="cod_profesion">Profesión:<br></label>
         <select name="cod_profesion" id="cod_profesion">
            <option value="1">...</option>

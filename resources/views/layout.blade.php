@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('title')</title>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
   <link rel="stylesheet" href="{{ asset('css/delay.css') }}">
 </head>
 <body>
-
+{{-- CONTENEDOR --}}
+<div class="contain">
   {{-- HEADER --}}
   <div class="header">
     <div class="header__logo">
@@ -53,13 +55,15 @@
   </div>
 
   {{-- FOOTER --}}
-  <div class="footer">
-    <footer>
-        Sticky Footer
-    </footer>
-  </div> 
+    <div class="footer">
+        <footer>
+          Sticky Footer
+        </footer>
+    </div> 
+</div>
   @yield('scripts')
   <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/vue.min.js') }}"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
   </body>
 </html>     

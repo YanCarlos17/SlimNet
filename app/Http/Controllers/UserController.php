@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Profesion;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,10 +14,12 @@ class UserController extends Controller
         return view('welcome');
     } 
     
+
     public function create()
     {
         return view('crear');
     }
+
 
     public function show()
     {
@@ -27,12 +28,10 @@ class UserController extends Controller
         return view('registro',compact('users','title'));
     }
 
-    public function detail(User $user, Profesion $profesion)
+    public function detail (User $user)
     {
         $title= 'Detalle del Usuario:';
-        $profesion = DB::table('Profesion')->get();
-        // dd($profesion);
-        return view('detalle', compact('user','title','profesion'));
+        return view('detalle', compact('user','title'));
     }
    
 
@@ -49,34 +48,25 @@ class UserController extends Controller
             'email' => $data['email'],
             'telefono' => $data['telefono'],
             'cod_profesion' => $data['cod_profesion']
-        ]);    
+        ]);  
+
         return redirect()->route('registro');
     }
 
+
     public function edit(User $user)
     {
-        $title= 'Editar Sujeto Alias:';  
+        $title= 'Modificar Usuario:';  
         return view('editar',compact('user','title'));
     }
 
-    public function update(User $user){
 
-        $user = User::find($request->user);
-        $user->nombre = $request->nombre;
-        $user->email = $request->email;
-        $user->telefono = $request->telefono;
-        $user->cod_profesion = $request->cod_profesion;
-        
-        
-        $data = request()->validate([
-            'nombre'=>'required',
-            'email'=> 'required',
-            'telefono' => 'required',
-            'cod_profesion' => 'required'
-        ]);
-
-        $user->save($data);
-
-        return redirect()->route('detalle',['user'=>$user]);
+    public function modified(User $user)
+    {
+       
+        $user->update(request()->all());
+        // dd($user);
+        return redirect()->route('detalle',['user' => $user->id]);    
     }
+
 }
