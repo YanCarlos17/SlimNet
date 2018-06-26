@@ -243,6 +243,7 @@ body{
             float: left;
         }
             #column1{
+                position: relative;
                 width: 70%;
                 background-color: rgb(255, 255, 255);
                 padding: 20px;
@@ -255,6 +256,7 @@ body{
                     width: 100%;
                 }
             #column2{
+                position: relative;
                 width: 30%;
                 background-color: rgb(175, 175, 175);
                 padding: 10px;
@@ -335,4 +337,9 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+.skull{
+    font-size: 23px;
+    box-sizing: border-box;
+    color: #db291b;
 }

@@ -15,9 +15,13 @@
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->telefono }}</td>
                 <td>{{ $user->cod_profesion }} </td>
-                <td><a href="{{ url("/detalle-usuario/{$user->id}") }}">Ver detalle</a></td>
-                <td><a href="{{url("/detalle-usuario/{$user->id}/editar")}}">Modificar</a></td>
-                <td><a href="{{--{{url("/detalle-usuario/{$user->id}/eliminar")}}--}}#">Eliminar</a></td>
+                <td><a href="{{url("/detalle-usuario/{$user->id}")}}">Ver detalle</a></td>
+                <td><a href="{{ route('modificar',$user) }}">Modificar</a></td>
+                <form action="{{ route('borrar',$user)}}" method="POST">
+                    {{method_field('DELETE')}}
+                    {{csrf_field()}}
+                    <td><button type="submit">Eliminar</button></td>
+                </form>
             </tr>
         @empty        
             <p>No hay Registros</p>  

@@ -28,7 +28,7 @@ class UserController extends Controller
         return view('registro',compact('users','title'));
     }
 
-    public function detail (User $user)
+    public function detail(User $user)
     {
         $title= 'Detalle del Usuario:';
         return view('detalle', compact('user','title'));
@@ -60,13 +60,23 @@ class UserController extends Controller
         return view('editar',compact('user','title'));
     }
 
-
     public function modified(User $user)
     {
-       
-        $user->update(request()->all());
-        // dd($user);
+        $data = request()->validate([
+            'nombre' => 'required',
+            'email' => 'required',
+            'telefono' => 'required',
+            'cod_profesion' => 'required'
+        ]);
+
+        $user->update($data);
         return redirect()->route('detalle',['user' => $user->id]);    
+    }
+
+    public function destroy(User $user)
+    {
+        $user->delete();
+        return redirect()->route('registro',['user' => $user->id]);
     }
 
 }
