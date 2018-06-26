@@ -5,6 +5,9 @@
     text-decoration: none;
     list-style: none;
 }
+a{
+    text-decoration: none !important;
+}
 body{
     background-color: rgb(60, 59, 56) !important;
     max-width: 1580px;
@@ -182,8 +185,8 @@ body{
 }
 
 .btn:hover{
-    background-color: blue;
-    color: greenyellow;
+    background-color: rgba(43, 42, 42, 0.954);
+    color: rgb(255, 255, 255);
 }
 
 .navbar{
@@ -193,21 +196,24 @@ body{
     margin: -48px auto 0;
     z-index: 3;
     background-color: rgba(28, 105, 133, 0.817);
+    padding: 0;
 }
     .navbar__list{
         display: flex;
         width: 100%;
-        height: 94%;
+        height: 100%;
         list-style: none;
+        margin-bottom: 0;
     }
         .list__item{
-            width: 20%;
-            height: 65.6%;
+            width: 36%;
+            height: 100%;
             text-align: center;
             margin: 0 1.6px;
-            padding-top: 15px;
             color: white;
+            padding-top: 11px;
         }
+        
         .list__item:hover{
             border: 2px solid lightgreen;
             color: lightgreen;
@@ -228,7 +234,7 @@ body{
     .message a:hover{
         color:rgb(255, 255, 255);
     }
-.container{
+.contenedor{
     width: 100%;
     
     margin: 0 auto;
@@ -263,12 +269,11 @@ body{
                 box-sizing: border-box;
             }
 
-.form-signin{
-    padding-top:2rem;
-    padding-left: 30px;
+.form{
+    
     display: inline-block;
    
-} .form-signin h1{
+} .form h1{
     margin: 15px auto;
 }
     .btn-sign{

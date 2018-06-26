@@ -1,34 +1,36 @@
 @extends('layout')
 
-    @section('content')
+@section('content')
         <h1 class="text-center">{{ $title }}</h1>
-        <table class="showTable">
+        <table class="table table-striped table-dark">
             <tr>
-                <td class="showTable_td">NOMBRE</td>
-                <td class="showTable_td">EMAIL</td>
-                <td class="showTable_td">TEL</td>
-                <td class="showTable_td">PROFESION</td>
+                <th scope="col">id</th>
+                <th scope="col">nombre</th>
+                <th scope="col">email</th>
+                <th scope="col">telefono</th>
+                <th scope="col">profesion</th>
             </tr>
-        @forelse($users as $user)        
+        @forelse($users as $user) 
             <tr>
+                <td>{{ $user->id }}</td>
                 <td>{{ $user->nombre }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->telefono }}</td>
                 <td>{{ $user->cod_profesion }} </td>
-                <td><a href="{{url("/detalle-usuario/{$user->id}")}}">Ver detalle</a></td>
-                <td><a href="{{ route('modificar',$user) }}">Modificar</a></td>
+                <td><a href="{{url("/detalle-usuario/{$user->id}")}}"><button class="btn btn-success">Detalles</button></a></td>
+                <td><a href="{{ route('modificar',$user) }}"><button class="btn btn-warning">Modificar</button></a></td>
                 <form action="{{ route('borrar',$user)}}" method="POST">
                     {{method_field('DELETE')}}
                     {{csrf_field()}}
-                    <td><button type="submit">Eliminar</button></td>
+                    <td><button type="submit" class="btn btn-danger">Eliminar</button></td>
                 </form>
             </tr>
         @empty        
             <p>No hay Registros</p>  
         @endforelse
-        </table>        
-    @endsection
+    </table>
+@endsection
 
-    @section('sidebar')
-        <h2 class="text-center">Barra Lateral</h2>
-    @endsection
+@section('sidebar')
+    <h2 class="text-center">Barra Lateral</h2>
+@endsection
