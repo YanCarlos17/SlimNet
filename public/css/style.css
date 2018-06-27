@@ -274,7 +274,11 @@ body{
     display: inline-block;
    
 } .form h1{
-    margin: 15px auto;
+    margin: 15px auto; 
+}
+
+.form-welcome{
+    margin: 0 0 0 12% !important;
 }
     .btn-sign{
         background-color: rgb(35, 104, 109);
