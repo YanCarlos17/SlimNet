@@ -13,6 +13,8 @@
 
 Route::get('/', function(){return view('cover');});
 
+Route::get();
+
 Route::get('/inicio','UserController@index');
 Route::get('/registro','UserController@show')->name('registro');
 
