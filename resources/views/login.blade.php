@@ -1,6 +1,6 @@
 @extends('layout')
     @section('content')
-    <form action="{{ url('/crear')}}" method="POST" class="form-signin form">
+    <form {{--action="{{ route('/Loguear')}}"--}} method="POST" class="form-signin form">
         <h1 class="h3 mb-3 text-center">Ingreso</h1>
         {{csrf_field()}}
         <label for="mail" class="sr-only">Mail</label>
@@ -11,6 +11,4 @@
     </form>
     @endsection
 
-    @section('sidebar')
-
-    @endsection
+   

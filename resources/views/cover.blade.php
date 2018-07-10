@@ -23,7 +23,7 @@
           <h3 class="masthead-brand">SlimNet</h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="{{ url('/inicio') }}">Inicio</a>
-            <a class="nav-link" href="#">Que es SlimNet?</a>
+            <a class="nav-link" href="{{route('Logueo')}}">LogIn</a>
             <a class="nav-link" href="#">Contact</a>
           </nav>
         </div>

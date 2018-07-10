@@ -19,7 +19,7 @@ body{
 }
 
 .body-cover{
-    background-image: url(../img/freedom.jpg);
+    background-color:#494949;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
