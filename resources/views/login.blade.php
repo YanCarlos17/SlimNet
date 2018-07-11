@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('LoginLayout')
     @section('content')
     <form {{--action="{{ route('/Loguear')}}"--}} method="POST" class="form-signin form">
         <h1 class="h3 mb-3 text-center">Ingreso</h1>
