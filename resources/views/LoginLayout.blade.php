@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="login-container">   
-
+        @yield('content')
     </div>
 </body>
 </html>
