@@ -41,8 +41,8 @@
         <input type="text" id="nombre" name="nombre" class="form-control"  value="{{old('nombre',$user->nombre)}}" required autofocus>
         <label for="email" class="sr-only">Email</label>
         <input type="email" id="email" name="email" class="form-control"  value="{{old('nombre',$user->email)}}" required>
-        <label for="telefono" class="sr-only">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" class="form-control"  value="{{old('nombre',$user->telefono)}}" required>
+        <label for="contraseña" class="sr-only">Teléfono</label>
+        <input type="password" id="contraseña" name="contraseña" class="form-control"  value="{{old('nombre',$user->contraseña)}}" required>
        
         <select name="cod_profesion" id="cod_profesion">
             <option value="1">Nueva profesión</option>

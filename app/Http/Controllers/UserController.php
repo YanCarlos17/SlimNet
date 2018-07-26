@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Profesion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Validator;
@@ -23,15 +24,16 @@ class UserController extends Controller
 
     public function show()
     {
+        
         $users= User::all();
         $title= 'Listado de Usuarios';
         return view('registro',compact('users','title'));
     }
 
-    public function detail(User $user)
+    public function detail(User $user, Profesion $profesion)
     {
         $title= 'Detalle del Usuario:';
-        return view('detalle', compact('user','title'));
+        return view('detalle', compact('user','title','profesion'));
     }
    
 
@@ -56,13 +58,13 @@ class UserController extends Controller
     }
 
 
-    public function edit(User $user)
+    public function edit(User $user, Profesion $profesion)
     {
         $title= 'Modificar Usuario:';  
-        return view('editar',compact('user','title'));
+        return view('editar',compact('user','title','profesion'));
     }
 
-    public function modified(User $user)
+    public function modified(User $user, Profesion $profesion)
     {
         $data = request()->validate([
             'nombre' => 'required',

@@ -3,10 +3,10 @@
     <div class="slider">
         <div class="slide-viewer">
             <div class="slide-group">
-                <div class="slide slide-1"><img src="{{ asset('img/foto-banner-1.jpg')}}" alt=""></div>
-                <div class="slide slide-2"><img src="{{ asset('img/banner-2.jpg')}}" alt=""></div>
-                <div class="slide slide-3"><img src="{{ asset('img/banner-3.jpg')}}" alt=""></div>
-                <div class="slide slide-4"><img src="{{ asset('img/banner-4.jpg')}}" alt=""></div>
+                <div class="slide slide-1 animated"><img src="{{ asset('img/foto-banner-1.jpg')}}" alt=""></div>
+                <div class="slide slide-2 animated"><img src="{{ asset('img/banner-2.jpg')}}" alt=""></div>
+                <div class="slide slide-3 animated"><img src="{{ asset('img/banner-3.jpg')}}" alt=""></div>
+                <div class="slide slide-4 animated"><img src="{{ asset('img/banner-4.jpg')}}" alt=""></div>
             </div>
         </div>
         <div class="slide-nav">
@@ -49,35 +49,37 @@
                 });
 
                 function move(newIndex) {
-                var animateLeft, slideLeft;
+                    var animateLeft, slideLeft;
 
-                advance();
-                    if ($group.is(':animated') || currentIndex === newIndex) {
-                    return;
-                }
+                    advance();
+                        if ($group.is(':animated') || currentIndex === newIndex) {
+                            
+                            return;
+                            
+                        }
 
-                buttonArray[currentIndex].removeClass('active');
-                buttonArray[newIndex].addClass('active');
+                    buttonArray[currentIndex].removeClass('active');
+                    buttonArray[newIndex].addClass('active');
 
-                if (newIndex > currentIndex) {
-                    $slideLeft = '100%';
-                    $animateLeft = '-100%';
-                } else {
-                    $slideLeft = '-100%';
-                    $animateLeft = '100%';
-                }
+                    if (newIndex > currentIndex) {
+                        $slideLeft = '100%';
+                        $animateLeft = '-100%';
+                    } else {
+                        $slideLeft = '-100%';
+                        $animateLeft = '100%';
+                    }
 
-                $slides.eq(newIndex).css({
-                    left: $slideLeft,
-                    display: 'block'
-                });
+                    $slides.eq(newIndex).css({
+                        left: $slideLeft,
+                        display: 'block'
+                    });
 
-                $group.animate({left: animateLeft}, function() {
-                    $slides.eq(currentIndex).css({display: 'none'});
-                    $slides.eq(newIndex).css({left: 0});
-                    $group.css({left: 0});
-                    currentIndex = newIndex;
-                });
+                    $group.animate({left: animateLeft}, function() {
+                        $slides.eq(currentIndex).css({display: 'none'});
+                        $slides.eq(newIndex).css({left: 0});
+                        $group.css({left: 0});
+                        currentIndex = newIndex;
+                    });
             }
 
             function advance() {
@@ -88,13 +90,14 @@
                     } else {
                         move(0);
                     }
-                }, 4000);
+                }, 3000);
             }
 
             $.each($slides, function(index) {
                 var $button = $('<button type="button" class="slide-btn">&bull;</button>');
                 if (index === currentIndex) {
                     $button.addClass('active');
+
                 }
                 $button.on('click', function(){
                     move(index);

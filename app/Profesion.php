@@ -23,5 +23,5 @@ class Profesion extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = ['remember_token'];
+    protected $hidden = ['codigo'];
 }
