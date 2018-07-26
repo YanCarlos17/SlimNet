@@ -17,7 +17,7 @@ class User extends Authenticatable
     public $timestamps = false;
     protected $table ='users';
     protected $primaryKey = 'id';
-    protected $fillable = ['id','nombre', 'email','telefono','cod_profesion'];
+    protected $fillable = ['id','nombre', 'email','contraseña','cod_profesion'];
 
     /**
      * The attributes that should be hidden for arrays.

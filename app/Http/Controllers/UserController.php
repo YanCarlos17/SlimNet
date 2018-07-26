@@ -41,14 +41,14 @@ class UserController extends Controller
         $data = request()->validate([
             'nombre' => 'required',
             'email' => 'required',
-            'telefono' => 'required',
+            'contraseña' => 'required',
             'cod_profesion' => 'required'
         ]);
         
         User::create([
             'nombre' => $data['nombre'],
             'email' => $data['email'],
-            'telefono' => $data['telefono'],
+            'contraseña' => $data['contraseña'],
             'cod_profesion' => $data['cod_profesion']
         ]);  
 
@@ -67,7 +67,7 @@ class UserController extends Controller
         $data = request()->validate([
             'nombre' => 'required',
             'email' => 'required',
-            'telefono' => 'required',
+            'contraseña' => 'required',
             'cod_profesion' => 'required'
         ]);
 

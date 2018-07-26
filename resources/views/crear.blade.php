@@ -18,8 +18,7 @@
             <label for="email" class="sr-only">Email</label>
             <input type="email" id="email" name="email" class="form-control" placeholder="Tú email" required>
             <label for="telefono" class="sr-only">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Teléfono" required>
-           
+            <input type="password" id="contraseña" name="contraseña" class="form-control" placeholder="Seña" required>
             <select name="cod_profesion" id="cod_profesion">
                 <option value="1">Elige una profesión</option>
                 <option value="2">Back-End Developer</option>

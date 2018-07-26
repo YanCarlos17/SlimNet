@@ -7,7 +7,7 @@
                 <th scope="col">id</th>
                 <th scope="col">nombre</th>
                 <th scope="col">email</th>
-                <th scope="col">telefono</th>
+                <th scope="col">Password</th>
                 <th scope="col">profesion</th>
             </tr>
         @forelse($users as $user) 
@@ -15,7 +15,7 @@
                 <td>{{ $user->id }}</td>
                 <td>{{ $user->nombre }}</td>
                 <td>{{ $user->email }}</td>
-                <td>{{ $user->telefono }}</td>
+                <td>{{ $user->contraseña }}</td>
                 <td>{{ $user->cod_profesion }} </td>
                 <td><a href="{{url("/detalle-usuario/{$user->id}")}}"><button class="btn btn-success">Detalles</button></a></td>
                 <td><a href="{{ route('modificar',$user) }}"><button class="btn btn-warning">Modificar</button></a></td>

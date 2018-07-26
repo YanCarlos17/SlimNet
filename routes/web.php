@@ -5,7 +5,7 @@ Route::get('/', function(){return view('cover');});
 Route::get('/Login','LoginController@index')->name('Logueo');
 
 Route::post('/Logeo',[
-    'uses' => 'LoginController@Updating' ,
+    'uses' => 'LoginController@Updating',
     'as' => 'Loguear']);
 
 Route::get('/inicio','UserController@index');

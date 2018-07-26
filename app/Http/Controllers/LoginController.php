@@ -32,16 +32,5 @@ class LoginController extends Controller
     public function index(){
         return view('login');
     }
-    public function Updating(User $user, Request $request){
-
-        $mail=$data['mail'];
-        $phone=$data['telefono'];
-
-        $
-
-        $users= User::all();
-        if($mail==){
-         return view('welcome')   
-        }
-    }
+    
 }
